@@ -1,16 +1,16 @@
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext('2d');
-canvas.width = 1800;
+canvas.width = 3000;
 canvas.height = 280;
 
 let ourTimer;
 
 const _w0 = 15;
-const _x0 = 1000;
+const _x0 = document.documentElement.clientWidth / 100 * 40;
 const _y0 = canvas.height - _w0;
 
 const _w1 = 30;
-const _x1 = 1300;
+const _x1 = document.documentElement.clientWidth / 100 * 60;
 const _y1 = canvas.height - _w1;
 
 ctx.strokeRect(_x0, _y0, _w0, _w0);
@@ -25,7 +25,8 @@ function sendForm(e){
         clearInterval(ourTimer);
     }
     e.preventDefault();
-    let keyBox = document.run.key;
+    let mass = document.run.mass;
+    let speed = document.run.speed;
 
     let w0 = _w0;
     let x0 = _x0;
@@ -36,8 +37,8 @@ function sendForm(e){
     let w1 = _w1;
     let x1 = _x1;
     let y1 = _y1;
-    let v1 = -100;
-    let m1 = Number(keyBox.value);
+    let v1 = -Number(speed.value);
+    let m1 = Number(mass.value);
 
     let pTimestamp = 0;
     let cnt = 0;
