@@ -9,20 +9,27 @@
 <br>
 
 <form style="text-align: center;" name="run">
-    <label style="font-size: 4vh; text-align: center;">
-        Масса красного объекта:
-        <input style="font-size: 3vh" type="number" name="mass" value="100"/>
-    </label>
-    <br>
-    <label style="font-size: 4vh; text-align: center;">
-        Начальная скорость красного объекта:
-        <input style="font-size: 3vh" type="number" name="speed" value="100"/>
-    </label>
-    <br>
-    <input style="font-size: 3vh" type="submit" name="send" value="Запуск" />
+    <div style="margin: 1vh;">
+        <label style="font-size: 4vh; text-align: center;">
+            Масса красного объекта:
+            <input style="font-size: 3vh" type="number" name="mass" value="100"/>
+        </label>
+    </div>
+
+    <div style="margin: 1vh;">
+        <label style="font-size: 4vh; text-align: center;">
+            Начальная скорость красного объекта:
+            <input style="font-size: 3vh" type="number" name="speed" value="100"/>
+        </label>
+    </div>
+
+    <div style="margin: 1vh;">
+        <input style="font-size: 3vh" type="submit" name="send" value="Запуск" />
+    </div>
+
 </form>
 
-<p style="font-size: 4vw; text-align: center;" id="number"> 0 </p>
+<p style="font-size: 4vw; text-align: center; margin: 1vh;" id="number"> 0 </p>
 
 <script src="main.js"></script>
 </body>
