@@ -3,33 +3,43 @@
 <head>
     <title>PhysicalModeling</title>
     <meta charset='utf-8' />
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            background-image: url(enshtein.jpg);
+            background-repeat: repeat;
+        }
+
+    </style>
 </head>
 <body>
-<canvas style="border: 1px solid black; margin: 2%;" id='canvas'>Обновите браузер</canvas>
+<canvas style="border: 1px solid black; margin-top: 2%; background-color: white;" id='canvas'>Обновите браузер</canvas>
 <br>
 
-<form style="text-align: center;" name="run">
-    <div style="margin: 1vh;">
-        <label style="font-size: 4vh; text-align: center;">
-            Масса красного объекта:
-            <input style="font-size: 3vh" type="number" name="mass" value="100"/>
-        </label>
-    </div>
+<div style="display: inline-block; border-radius: 1vh; margin: 1vh; padding: 1vh; background-color: rgba(255, 255, 255, 0.9);">
+    <form style="text-align: center;" name="run">
+        <div style="margin: 1vh;">
+            <label style="font-size: 4vh; text-align: center;">
+                Масса красного объекта:
+                <input style="font-size: 3vh" type="number" name="mass" value="100"/>
+            </label>
+        </div>
 
-    <div style="margin: 1vh;">
-        <label style="font-size: 4vh; text-align: center;">
-            Начальная скорость красного объекта:
-            <input style="font-size: 3vh" type="number" name="speed" value="100"/>
-        </label>
-    </div>
+        <div style="margin: 1vh;">
+            <label style="font-size: 4vh; text-align: center;">
+                Начальная скорость красного объекта:
+                <input style="font-size: 3vh" type="number" name="speed" value="100"/>
+            </label>
+        </div>
 
-    <div style="margin: 1vh;">
-        <input style="font-size: 3vh" type="submit" name="send" value="Запуск" />
-    </div>
+        <div style="margin: 1vh;">
+            <input style="font-size: 3vh" type="submit" name="send" value="Запуск" />
+        </div>
+    </form>
+    <p style="font-size: 4vw; text-align: center; margin: 1vh;" id="number"> 0 </p>
+</div>
 
-</form>
-
-<p style="font-size: 4vw; text-align: center; margin: 1vh;" id="number"> 0 </p>
 
 <script src="main.js"></script>
 </body>
