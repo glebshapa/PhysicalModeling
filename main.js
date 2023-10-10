@@ -14,7 +14,7 @@ const _x1 = document.documentElement.clientWidth / 100 * 60;
 const _y1 = canvas.height - _w1;
 
 ctx.strokeRect(_x0, _y0, _w0, _w0);
-ctx.fillStyle = "green";
+ctx.fillStyle = "blue";
 ctx.fillRect(_x0, _y0, _w0, _w0);
 ctx.strokeRect(_x1, _y1, _w1, _w1);
 ctx.fillStyle = "red";
@@ -37,8 +37,8 @@ function sendForm(e){
     let w1 = _w1;
     let x1 = _x1;
     let y1 = _y1;
-    let v1 = -Number(speed.value);
-    let m1 = Number(mass.value);
+    let v1 = -Math.abs(Number(speed.value));
+    let m1 = Math.abs(Number(mass.value));
 
     let pTimestamp = 0;
     let cnt = 0;
@@ -66,14 +66,14 @@ function sendForm(e){
 
         if (x1 <= w0) {
             ctx.strokeRect(0, y0, w0, w0);
-            ctx.fillStyle = "green";
+            ctx.fillStyle = "blue";
             ctx.fillRect(0, y0, w0, w0);
             ctx.strokeRect(w0, y1, w1, w1);
             ctx.fillStyle = "red";
             ctx.fillRect(w0, y1, w1, w1);
         } else {
             ctx.strokeRect(x0, y0, w0, w0);
-            ctx.fillStyle = "green";
+            ctx.fillStyle = "blue";
             ctx.fillRect(x0, y0, w0, w0);
             ctx.strokeRect(x1, y1, w1, w1);
             ctx.fillStyle = "red";
@@ -81,6 +81,10 @@ function sendForm(e){
         }
 
         document.getElementById('number').textContent = cnt.toString();
+        document.getElementById('x0').textContent = (Math.round(x0 * 100) / 100).toString();
+        document.getElementById('x1').textContent = (Math.round(x1 * 100) / 100).toString();
+        document.getElementById('v0').textContent = (Math.round(v0 * 100) / 100).toString();
+        document.getElementById('v1').textContent = (Math.round(v1 * 100) / 100).toString();
     }, 0.0016);
 }
 
