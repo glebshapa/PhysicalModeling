@@ -25,20 +25,21 @@ function sendForm(e){
         clearInterval(ourTimer);
     }
     e.preventDefault();
-    let mass = document.run.mass;
+    let mass_red = document.run.mass_red;
+    let mass_blue = document.run.mass_blue;
     let speed = document.run.speed;
 
     let w0 = _w0;
     let x0 = _x0;
     let y0 = _y0;
     let v0 = 0;
-    let m0 = 1;
+    let m0 = Math.abs(Number(mass_blue.value));;
 
     let w1 = _w1;
     let x1 = _x1;
     let y1 = _y1;
     let v1 = -Math.abs(Number(speed.value));
-    let m1 = Math.abs(Number(mass.value));
+    let m1 = Math.abs(Number(mass_red.value));
 
     let pTimestamp = 0;
     let cnt = 0;
@@ -81,8 +82,6 @@ function sendForm(e){
         }
 
         document.getElementById('number').textContent = cnt.toString();
-        document.getElementById('x0').textContent = (Math.round(x0 * 100) / 100).toString();
-        document.getElementById('x1').textContent = (Math.round(x1 * 100) / 100).toString();
         document.getElementById('v0').textContent = (Math.round(v0 * 100) / 100).toString();
         document.getElementById('v1').textContent = (Math.round(v1 * 100) / 100).toString();
     }, 0.0016);

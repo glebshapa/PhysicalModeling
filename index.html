@@ -7,7 +7,7 @@
         body {
             margin: 0;
             text-align: center;
-            background-image: url(enshtein.jpg);
+            background-color: #bbbbbb;
             background-repeat: repeat;
         }
 
@@ -21,8 +21,15 @@
     <form style="text-align: center;" name="run">
         <div style="margin: 1vh;">
             <label style="font-size: 4vh; text-align: center;">
+                Масса синего объекта:
+                <input style="font-size: 3vh" type="number" name="mass_blue" value="1"/>
+            </label>
+        </div>
+
+        <div style="margin: 1vh;">
+            <label style="font-size: 4vh; text-align: center;">
                 Масса красного объекта:
-                <input style="font-size: 3vh" type="number" name="mass" value="100"/>
+                <input style="font-size: 3vh" type="number" name="mass_red" value="100"/>
             </label>
         </div>
 
@@ -39,9 +46,9 @@
     </form>
 
     <div style="margin: 1vh;">
-        <p style="font-size: 3vh; color: blue; margin: 0; text-align: left;"> x = <b id="x0">0</b> </p>
+
         <p style="font-size: 3vh; color: blue; margin: 0; text-align: left;"> v = <b id="v0">0</b> </p>
-        <p style="font-size: 3vh; color: red; margin: 0; text-align: left;"> x = <b id="x1">0</b> </p>
+
         <p style="font-size: 3vh; color: red; margin: 0; text-align: left;"> v = <b id="v1">0</b> </p>
         <p style="font-size: 6vh; margin: 0; text-align: left;"> 💥 <b id="number">0</b> </p>
     </div>
